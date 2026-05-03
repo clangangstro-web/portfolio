@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>juh bantar | Full-Stack Developer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+    .gradient-text {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- NAVIGATION -->
+  <nav class="bg-white shadow-sm sticky top-0 z-50">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <a href="index.html" class="text-2xl font-bold gradient-text">JD</a>
+      <div class="hidden md:flex space-x-6">
+        <a href="index.html" class="text-purple-600 font-medium">Home</a>
+        <a href="about.html" class="hover:text-purple-600 transition">About</a>
+        <a href="services.html" class="hover:text-purple-600 transition">Services</a>
+        <a href="contact.html" class="hover:text-purple-600 transition">Contact</a>
+      </div>
+      <button id="mobileMenuBtn" class="md:hidden text-2xl">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+    <div id="mobileMenu" class="hidden md:hidden bg-white border-t">
+      <a href="index.html" class="block px-4 py-2 text-purple-600 font-medium">Home</a>
+      <a href="about.html" class="block px-4 py-2 hover:bg-gray-100">About</a>
+      <a href="services.html" class="block px-4 py-2 hover:bg-gray-100">Services</a>
+      <a href="contact.html" class="block px-4 py-2 hover:bg-gray-100">Contact</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="min-h-screen flex items-center justify-center bg-gradient-to-br from-purple-600 via-indigo-600 to-blue-500 text-white">
+    <div class="text-center px-4">
+      <h1 class="text-5xl md:text-7xl font-extrabold mb-4">
+        Hi, I'm <span class="text-yellow-300">JUH BANTAR</span>
+      </h1>
+      <p class="text-xl md:text-3xl font-light mb-8">
+        Full‑Stack Web Developer | Crafting Modern & Scalable Solutions
+      </p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="services.html" class="bg-white text-purple-700 font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-gray-100 transition">
+          View My Services
+        </a>
+        <a href="contact.html" class="border-2 border-white text-white font-semibold py-3 px-8 rounded-full hover:bg-white hover:text-purple-700 transition">
+          Let's Talk
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- FEATURED SERVICES PREVIEW -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-4 max-w-6xl text-center">
+      <h2 class="text-4xl font-bold mb-12">What I Do</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="p-8 rounded-xl shadow-sm hover:shadow-md transition bg-gray-50">
+          <i class="fas fa-code text-4xl text-purple-600 mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">Frontend Development</h3>
+          <p class="text-gray-600">Responsive, interactive UIs with React, Vue, and modern CSS.</p>
+        </div>
+        <div class="p-8 rounded-xl shadow-sm hover:shadow-md transition bg-gray-50">
+          <i class="fas fa-server text-4xl text-purple-600 mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">Backend APIs</h3>
+          <p class="text-gray-600">Robust REST & GraphQL APIs with Node.js, Express, Python.</p>
+        </div>
+        <div class="p-8 rounded-xl shadow-sm hover:shadow-md transition bg-gray-50">
+          <i class="fas fa-database text-4xl text-purple-600 mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">Database & DevOps</h3>
+          <p class="text-gray-600">SQL/NoSQL design, AWS/Docker deployments, CI/CD pipelines.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-800 text-white py-8">
+    <div class="container mx-auto px-4 text-center">
+      <div class="flex justify-center space-x-6 mb-4">
+        <a href="#" class="text-2xl hover:text-purple-400 transition"><i class="fab fa-github"></i></a>
+        <a href="#" class="text-2xl hover:text-purple-400 transition"><i class="fab fa-linkedin"></i></a>
+        <a href="#" class="text-2xl hover:text-purple-400 transition"><i class="fab fa-twitter"></i></a>
+      </div>
+      <p class="text-gray-400">&copy; 2026 Juh bantar. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+  </script>
+</body>
+</html>
